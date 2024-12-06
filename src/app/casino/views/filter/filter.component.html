@@ -1,0 +1,31 @@
+<div class="row bd-nav">
+  <div class="col-md-8 col-12">
+    <div class="casino-new--casino-wrapper--categories-nav">
+      <div class="casino-new--casino-wrapper--categories-nav-links proder-name">
+        <a *ngIf="isConnected !== undefined" (click)="getFavs()" [routerLink]="isConnected ? '/games/favorit' : currentRoute "
+          class="casino-new--casino-wrapper--categories-nav--fav"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <a (click)="showAllGames()" [ngClass]="isAllGames? 'active' : 'inactive' " default="true">All Games</a>
+        <div class="proder-name" *ngFor="let cat of categoryList">
+          <a [ngClass]="casinoFilter === cat.category || casinoLiveFilter === cat.category || virtualFilter === cat.category ? 'active' : 'notActive' " (click)="getGamesByCategory(cat.category)">{{cat.category}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4  col-12">
+    <div class="casino-new--casino-wrapper--categories-nav ft-r">
+      <div class="casino-new--casino-wrapper--search-wrapper">
+        <div class="casino-new--casino-wrapper--search-header ">
+          <div class="casino-new--casino-wrapper--search-input">
+            <button class="popup-open-b m" (click)="gameByName(searchVal)"><i class="fa fa-search" aria-hidden="true"
+                ></i>
+            </button>
+            <input type="text" class="" placeholder="Search for a game" [(ngModel)]="searchVal">
+          </div>
+          <div class="casino-new--casino-wrapper--search-dropdown" (click)="open()">Providers<i class="fa fa-sliders"
+              aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

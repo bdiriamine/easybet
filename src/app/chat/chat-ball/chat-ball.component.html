@@ -1,0 +1,26 @@
+<div class="col text-right dropdownn">
+    <div ngbDropdown placement="top-right" class="d-inline-block">
+        <button (click)="openChat()" class="btn button" id="dropdownBasic2" ngbDropdownToggle>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172"
+                style=" fill:#000000;">
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                    style="mix-blend-mode: normal">
+                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                    <g fill="#ffffff">
+                        <path
+                            d="M86,16.125c-38.5925,0 -69.875,31.2825 -69.875,69.875c0,14.43671 4.37832,27.84856 11.87854,38.9845l-6.50354,30.8905l33.77746,-7.11243c9.27383,4.54822 19.69611,7.11243 30.72254,7.11243c38.5925,0 69.875,-31.2825 69.875,-69.875c0,-38.5925 -31.2825,-69.875 -69.875,-69.875zM53.75,77.9375c4.46125,0 8.0625,3.60125 8.0625,8.0625c0,4.46125 -3.60125,8.0625 -8.0625,8.0625c-4.46125,0 -8.0625,-3.60125 -8.0625,-8.0625c0,-4.46125 3.60125,-8.0625 8.0625,-8.0625zM86,77.9375c4.46125,0 8.0625,3.60125 8.0625,8.0625c0,4.46125 -3.60125,8.0625 -8.0625,8.0625c-4.46125,0 -8.0625,-3.60125 -8.0625,-8.0625c0,-4.46125 3.60125,-8.0625 8.0625,-8.0625zM118.25,77.9375c4.46125,0 8.0625,3.60125 8.0625,8.0625c0,4.46125 -3.60125,8.0625 -8.0625,8.0625c-4.46125,0 -8.0625,-3.60125 -8.0625,-8.0625c0,-4.46125 3.60125,-8.0625 8.0625,-8.0625z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic2" class="chatt">
+            <div *ngIf="isBallClicked">
+                <app-contact></app-contact>
+            </div>
+            <!-- <router-outlet></router-outlet> -->
+        </div>
+    </div>
+</div>

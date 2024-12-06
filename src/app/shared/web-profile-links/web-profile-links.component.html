@@ -1,0 +1,20 @@
+<div class="links" #userDetails>
+    <span class="name">{{username}}</span>
+    <div class="item">
+        <span routerLink="user/profile">Profile</span>
+    </div>
+    <div class="item">
+        <span routerLink="user/history/casino">Historique</span>
+    </div>
+    <div class="item">
+        <span routerLink="user/transfert"> Liste de transfert</span>
+    </div>
+    <div class="item" routerLink="user/bet-history">
+        <span> Historique des paris</span>
+    </div>
+
+    <div class="item" (click)="logout(false)">
+        <img src="https://easybet.tn/assets/img/icons8-logout-rounded-down-30.png">
+        <span class="mx-2">logout</span>
+    </div>
+</div>

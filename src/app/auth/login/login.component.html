@@ -1,0 +1,40 @@
+<div class="modal-header" >
+    <h4 class="modal-title pull-left" translate>Login</h4>
+    <button type="button" class="close" aria-label="Close" (click)="close()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body login-box" (keyup.enter)="login()">
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <input type="text" name="username" class="form-style" formControlName="username" placeholder="Your username"
+                id="logemail" autocomplete="off">
+            <i class="input-icon uil uil-at"></i>
+        </div>
+        <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)"
+            class="alert-danger">
+            <div translate *ngIf="loginForm.controls.username.errors?.required">
+                Username is required
+            </div>
+            <div translate *ngIf="loginForm.controls.username.errors?.username">
+                Username is not correct
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <input type="password" name="logpass" class="form-style" formControlName="password"
+                placeholder="Your Password" id="logpass" autocomplete="off">
+            <span class="eye" *ngIf="!showPassword" (click)="onShowPassword()"><i class="fa fa-eye-slash"></i></span>
+            <span class="eye" *ngIf="showPassword" (click)="onShowPassword()"><i class="fa fa-eye"></i></span>
+        </div>
+        <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
+            class="alert-danger">
+            <div translate *ngIf="loginForm.controls.password.errors?.required">
+                Password is required
+            </div>
+        </div>
+        <a class="btn mt-4" (click)="login()">Log in</a>
+        <img src="../../../../assets/easybet.png" alt="logo" class="login-logo">
+    </form>
+
+
+</div>

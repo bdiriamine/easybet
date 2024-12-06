@@ -1,0 +1,66 @@
+<div class="Box-sf" >
+  <div class="profile-head">
+    <span class="profile-back" (click)="close(false)">
+      <svg width="28" height="28" viewBox="0 0 24 24">
+        <path fill="#fff" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+      </svg>
+    </span>
+  </div>
+  <ul *ngIf="username !== null" class=" list">
+    <li class="bgColor"> Username &nbsp;: &nbsp; {{username}}</li>
+
+    <li class="bgColor"> Totale Balance &nbsp; : &nbsp; {{balance}} TND</li>
+    <li class="bgColor" routerLink="user/transfert"> Liste de transfert</li>
+    <li class="bgColor" routerLink="user/bet-history"> Historique des paris</li>
+    <li class="bgColor" routerLink="user/history/casino"> Account History </li>
+    <li class="bgColor" routerLink="user/profile"> Profile</li>
+
+    <li style="color:var(--right-bar-txt)">
+      <span (click)="logout()">
+        <img src="https://easybet.tn/assets/img/icons8-logout-rounded-down-30.png">
+        Déconnexion
+      </span>
+    </li>
+  </ul>
+  <ul *ngIf="username == null" class="list">
+    <li class="text-center" style="color:var(--right-bar-txt);">vous avez un compte</li>
+    <li class="text-center py-3" (click)="close(false)">
+      <app-connection-button ></app-connection-button>
+    </li>
+  </ul>
+
+  <ul class="list">
+    <li class="bgColor" style="display: flex;align-items: center;justify-content: space-between;">
+      <span style="float: left"> language : </span> &nbsp;&nbsp;&nbsp;
+
+      <ng-select class="custom" [(ngModel)]="selectedLng" [clearable]="false" [searchable]="false"
+        [hideSelected]="true">
+        <ng-option value="en">
+          <img class="phlangue" src="https://easybet.tn/assets/footer img/eng2.png" alt=""> &nbsp;
+        </ng-option>
+        <ng-option value="fr">
+          <img class="phlangue" src="https://easybet.tn/assets/footer img/fr3.png" alt="">
+        </ng-option>
+      </ng-select>
+
+    </li>
+    <li *ngIf="username !== null" class="bgColor assist" [routerLink]="'/chat'"  contact>
+      <img src="https://easybet.tn/assets/ch.gif" alt="" style="width:32px"> Assistance
+    </li>
+    <li class="bgColor">
+      Controller votre bet
+    </li>
+    <li  style="text-align:center;padding-top: 10px;border-top: 2px solid var(--border-right-bar);color:var(--right-bar-txt);">
+      Your Bet ID
+    </li>
+    <li class="input-holder" style="text-align: center;border-bottom:2px solid var(--border-right-bar);height:90px; ">
+      <p>
+        <input type="text" placeholder="Insérez le code ici…" [(ngModel)]="code">
+        <button (click)="getCoupn(code)" (click)="close(false)" 
+          style="width:28%;background-color:var(--header-background) ;border: none;border-top-right-radius: 10px;border-bottom-right-radius: 10px;font-weight: 600;font-size: 12px;color: white;">
+          rechercher
+        </button >
+      </p>
+    </li>
+  </ul>
+</div>

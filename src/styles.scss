@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Shippori+Antique+B1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+// :root {
+//     --delay: .5s;
+//     --timing: 1s;
+//     --primary: #00f6ef;
+//     --secondary: #e93ca3;
+//     --background: #050615;
+//     --btnCnx-background: #0c404e;
+//     --homemobi-background: #133c4e;
+//     --header-background: #060b27;
+//     --light-background: #fff;
+//     --light-font-color: #1c1c1c;
+//     --light-font-color-th: #a9a9a9;
+//     --light-font-color-darker: #333;
+//     --header-light-font: #fff;
+//     --angle: 50deg;
+//     --toggleHeight: 16em;
+//     --toggleWidth: 30em;
+//     --toggleBtnRadius: 10em;
+//     --bgColor--night: #423966;
+//     --mooncolor: #D9FBFF;
+//     --selected: #133d4e;
+// }
+
+.dark {
+    --delay: .5s;
+    --timing: 1s;
+    --primary: #00f6ef;
+    --secondary: #e93ca3;
+    --background: #050615;
+    --btnCnx-background: #0c404e;
+
+    --focus: #fff;
+
+
+    --light-background: #fff;
+    --light-font-color: #1c1c1c;
+    --light-font-color-th: #a9a9a9;
+    --light-font-color-darker: #333;
+    --header-light-font: #fff;
+    --angle: 50deg;
+    --toggleHeight: 16em;
+    --toggleWidth: 30em;
+    --toggleBtnRadius: 10em;
+    --bgColor--night: #423966;
+    --mooncolor: #D9FBFF;
+    --selected: #f6fbfd;
+    --background-big-card: #060b27;
+    --border-cards: #515658;
+    --text-dark: hsla(0, 0%, 100%, .38);
+    --tete-table-betsport: #060b27 ;
+
+    --box-sidebar-background: #1a1e3c;
+    --body-sidebar: #303960;
+
+    --text-primary: #00f6ef;
+    --text-secondary: #060b27;
+    --homemobi-background: #133c4e;
+    --header-background: #060b27;
+
+    --selected-nav: #00f6ef;
+    --border-right-bar: #303960;
+    --home-bg: #050615;
+    --text-light: #E9EDF0;
+    --th-table : #060b27;
+    --color-txt-tr-tbody : #fff;
+    --tr-tbody: #18225c;
+    --activerootfilt:#01f2eb;
+    --txt-ft : #495057;
+    --right-bar-txt:#fff;
+}
+
+.light {
+    --header-background: #1797C6;
+    // --selected: #060b27;
+    --background-big-card: #E9EDF0;
+    --border-right-bar: #d7d7d7;
+    --background: #E9EDF0;
+    // app basic colors
+    --box-sidebar-background: #AAAAB5;
+    --body-sidebar: #c9c9cf;
+
+    --text-primary: #fff;
+    --text-secondary: #00f6ef;
+
+    --background-card: #1a1e3c2e;
+
+    --primary: #00f6ef;
+    --selected: #303960;
+
+    --border-cards: #515658;
+
+    --text-dark: #303960;
+    --text-light: #E9EDF0;
+
+    --selected-nav: #1797c6;
+    --focus: #060b27;
+    --home-bg: #303332;
+    --tete-table-betsport: #060b27 ;
+    --tr-tbody: #cdcdd5;
+    --color-txt-tr-tbody : #18225c;
+    --th-table : #92929f;
+    --activerootfilt:#060b27;
+    --txt-ft : #dadada;
+    --right-bar-txt:#30395F;
+}
+
+body {
+    background-color: var(--home-bg) !important;
+}
+
+.txt {
+    font-family: "Changa", sans-serif;
+}
+
+.custom-select:focus,
+// .form-control:focus {
+//     box-shadow: 0 0 0 3px var(--primary)!important;
+//     border-style: hidden!important;
+// }
+
+.primary-color {
+    color: var(--primary) !important;
+}
+
+.active-icon-color {
+    background: -webkit-linear-gradient(rgb(248, 209, 47) 0%, rgb(240, 185, 11) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-color {
+    color: var(--text-primary)
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.boxio {
+    background-color: var(--background-big-card);
+    border-radius: 20px;
+    border: 1px solid var(--border-cards);
+}
+
+.items-spacing {
+    margin: 20px !important;
+    padding-top: 3%
+}
+
+@media (max-width:991px) {
+    .items-spacing {
+        margin: 5px !important;
+        padding-top: 0px !important;
+    }
+
+}
+
+.popu {
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-left: 10%;
+    color: #fff;
+    line-height: 50px;
+}

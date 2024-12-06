@@ -1,0 +1,210 @@
+#example1 {
+    
+    background-repeat: no-repeat;
+    background-size  : auto;
+  
+  }
+  
+  .bg {
+    background: var(--box-sidebar-background);
+  }
+  
+  .center {
+    text-align : center;
+    align-items: center;
+    align-self : center;
+  
+  
+  
+  }
+  
+  #notfound {
+    position        : relative;
+    height          : 100vh;
+    background-color: #222;
+  }
+  
+  #notfound .notfound {
+    position         : absolute;
+    left             : 50%;
+    top              : 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform    : translate(-50%, -50%);
+    transform        : translate(-50%, -50%);
+  }
+  
+  .notfound {
+    max-width  : 460px;
+    width      : 100%;
+    text-align : center;
+    line-height: 1.4;
+  }
+  
+  .notfound .notfound-404 {
+    height     : 158px;
+    line-height: 153px;
+  }
+  
+  .notfound .notfound-404 h1 {
+    font-family   : 'Josefin Sans', sans-serif;
+    color         : #222;
+    font-size     : 220px;
+    letter-spacing: 10px;
+    margin        : 0px;
+    font-weight   : 700;
+    text-shadow   : 2px 2px 0px #c9c9c9, -2px -2px 0px #c9c9c9;
+  }
+  
+  .notfound .notfound-404 h1>span {
+    text-shadow: 2px 2px 0px #0ea7e4, -2px -2px 0px #108da3, 0px 0px 8px #0d9eb8;
+  }
+  
+  .notfound p {
+    font-family  : 'Josefin Sans', sans-serif;
+    color        : #c9c9c9;
+    font-size    : 16px;
+    font-weight  : 400;
+    margin-top   : 0px;
+    margin-bottom: 15px;
+  
+  }
+  
+  .notfound a {
+    font-family       : 'Josefin Sans', sans-serif;
+    font-size         : 14px;
+    text-decoration   : none;
+    text-transform    : uppercase;
+    background        : transparent;
+    color             : #c9c9c9;
+    border            : 2px solid #c9c9c9;
+    display           : inline-block;
+    padding           : 10px 25px;
+    font-weight       : 700;
+    -webkit-transition: 0.2s all;
+    transition        : 0.2s all;
+  }
+  
+  .notfound a:hover {
+    color       : #00a2ff;
+    border-color: #00a2ff;
+  }
+  
+  @media only screen and (min-width: 993px) {
+    .cn1 {
+      width      : 100%;
+      padding-top: 4%;
+    }
+  
+    .cn2 {
+      margin     : 0 auto;
+      font-size  : 35px;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+    }
+  
+    .cn3 {
+      margin     : 0 auto;
+      font-size  : 17px;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      color      : #8e8e8e;
+      font-weight: bold;
+    }
+  
+    .cn4 {
+      margin     : 0 auto;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      color      : #8e8e8e;
+      font-size  : 17px;
+      font-weight: bold;
+    }
+  
+    .cn5 {
+      margin       : 0 auto;
+      font-size    : 17px;
+      font-family  : 'Open Sans', sans-serif;
+      margin-bottom: 2%;
+      text-align   : center;
+      color        : #8e8e8e;
+      font-weight  : bold;
+    }
+  
+    .imm {
+      width : 30%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .cn1 {
+      width      : 100%;
+      padding-top: 30%;
+    }
+  
+    .cn2 {
+      margin     : 0 auto;
+      font-size  : 17px;
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      text-align : center;
+      margin-top : 4%;
+    }
+  
+    .cn3 {
+      margin     : 0 auto;
+      font-size  : 14px;
+      font-family: 'Open Sans', sans-serif;
+      text-align : center;
+      color      : #8e8e8e;
+      font-weight: bold;
+    }
+  
+    .cn4 {
+      margin     : 0 auto;
+      font-family: 'Open Sans', sans-serif;
+      text-align : center;
+      color      : #8e8e8e;
+      font-size  : 14px;
+      margin-top : 8%;
+      font-weight: bold;
+    }
+  
+    .cn5 {
+      margin       : 0 auto;
+      font-size    : 14px;
+      font-family  : 'Open Sans', sans-serif;
+      margin-bottom: 2%;
+      text-align   : center;
+      color        : #8e8e8e;
+      font-weight  : bold;
+    }
+  
+    .imm {
+      width : 50%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .web {
+      display: block;
+    }
+  
+    .mobi {
+      display: none !important;
+    }
+  
+  }
+  
+  @media (max-width: 991px) {
+    .web {
+      display: none;
+    }
+  
+    .mobi {
+      display: none !important;
+    }
+  
+  }

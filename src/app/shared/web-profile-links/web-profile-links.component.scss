@@ -1,0 +1,24 @@
+.links {
+    .item {
+        margin: 16px 10px;
+    }
+
+    .item:hover {
+        color: var(--primary);
+    }
+
+    .balance {
+        color: var(--primary);
+    }
+
+    .links.item:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .name {
+        color: var(--primary);
+    }
+}

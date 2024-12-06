@@ -1,0 +1,17 @@
+<div class="img-container hand" (mouseenter)="showgamename()" (mouseleave)="hidegamename()">
+    <img class="spinner" *ngIf="!isImgLoaded" src="../../../assets/casino/img-loader.gif">
+    <img class="image" (click)="openG()" [src]="game.logo_url" (load)="isImgLoaded = true" onerror=" this.src='assets/erro.png'">
+    <div class="txt-cas">
+        <span class="txt-sp">
+            {{game.label}}
+        </span>
+        <span class="sp-ico" (click)="addfav(game.id)">
+            <a *ngIf="liked"><i class="fa fa-heart" aria-hidden="true"
+                    style="color:red"></i>
+            </a>
+            <a *ngIf="!liked"><i class="fa fa-heart" aria-hidden="true"
+                    style="color:white"></i>
+            </a>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+<div class="container-fluid body-content slider-height" style="padding-left:0px;padding-right:0px">
+    <main id="turbogamePage" style=" background: linear-gradient(0deg, rgba(20, 110, 81, 0.1), rgba(20, 110, 81, 0.1)),url({{urlimagebg}}) !important; ">
+        <div id="pageContent" class="opened">
+            <div id="turbogameBoxes">
+                <div class="container">
+                    <div class="box box-1">
+                        <div class="box-content">
+                            <div class="sys-game mb-4">
+                                <i class="provider-o spribe hidden"></i>
+                                <img src="../../../assets/mini games/dinosaur.webp" alt="dino icon" class="game-image">
+                                <a  class="play-sys-game real hidden"></a>
+                                <a  class="btn play-now" (click)="openG(dino.url,dino.image_name,dino.name, dino)">Play Now</a>
+                                <span>Best Games for You</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box box-2">
+                        <div class="box-content">
+                            <div class="sys-game" *ngFor="let game of listminiGmaes " (click)="openG(game.url,game.image_name,game.name, game)" onerror=" this.src='assets/erro.png'">
+                                <div>
+                                    <img [src]="game.image_name" class="game-image"  alt="dino games" onerror=" this.src='assets/erro.png'">
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

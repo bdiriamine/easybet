@@ -1,0 +1,10 @@
+<div class="img-container hand" (click)="open()" (mouseenter)="showgamename()" (mouseleave)="hidegamename()">
+    <img class="spinner" *ngIf="!isImgLoaded" src="https://easybet.tn/assets/casino/img-loader.gif">
+    <img class="image" [class.image-hover]="showname" [hidden]="!isImgLoaded" [src]="game.game_image" (load)="isImgLoaded = true">
+    <div class="content hover" *ngIf="showname">
+        <div class="icons">
+            <a><i  class="fa-solid fa-circle-play fa-2xl play-icon"></i></a>
+        </div>
+        <h6 class="game-name txt">{{game.game_name}}</h6>
+    </div>
+</div>

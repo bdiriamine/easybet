@@ -1,0 +1,30 @@
+<div class="container " style="margin-top:2%">
+    <div class="bg-c">
+        <div *ngFor="let games of providers ">
+            <div class="row" >
+                <div class="col-md-8 col-8">
+                    <span class="txt-prov">
+                        {{games.name}}
+                    </span>
+                    <span class="txt-cont">( {{games.count}} )</span>
+                </div>
+                <div class="col-md-4 col-4">
+                    <div style="float:right">
+                        <div (click)="goTOcasinoGames(games.name)" class="show-all">
+                            <span><i class="fa-solid fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:3%">
+                <div class="col-md-12 col-12">
+                    <div class="SquareGrid" [ngClass]=" addgrid ? 'SquareGridmoin' : 'SquareGrid'">
+                        <div class="item" *ngFor="let game of games.game | slice:0:8; ">
+                            <app-game [game]="game"></app-game>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

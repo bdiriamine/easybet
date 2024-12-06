@@ -1,0 +1,141 @@
+<div class="container pt-5 mt-3">
+    <div class="row flex-lg-nowrap">
+        <div class="col">
+            <div class="row">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="e-profile">
+                                <div class="row">
+                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Profile</h4>
+                                            <p class="mb-0">{{username}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content pt-3 ">
+                                    <div class="tab-pane active">
+                                        <form class="form pb-5" [formGroup]="profileForm">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Nom</label>
+                                                                <input formControlName="firstname"
+                                                                    class="form-control border-0" readonly type="text"
+                                                                    name="name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Prénom</label>
+                                                                <input formControlName="lastname"
+                                                                    class="form-control border-0" readonly type="text"
+                                                                    name="username">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Email</label>
+                                                                <input formControlName="email" class="form-control"
+                                                                    type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Date de naissance</label>
+                                                                <input formControlName="b_date"
+                                                                    class="form-control border-0" readonly type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Téléphone</label>
+                                                                <input formControlName="phone" class="form-control"
+                                                                    type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Pays</label>
+                                                                <input formControlName="country"
+                                                                    class="form-control border-0" readonly type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <form [formGroup]="changePasswordForm">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 mb-3">
+                                                    <div class="mb-2"><b>Change Password</b></div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Current Password</label>
+                                                                <input class="form-control"
+                                                                    formControlName="old_password" type="text">
+                                                            </div>
+                                                            <div translate
+                                                                *ngIf="changePasswordForm.controls.old_password.errors?.required && changePasswordForm.controls['old_password'].touched">
+                                                                Password is required
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>New Password</label>
+                                                                <input class="form-control"
+                                                                    formControlName="new_password" type="text">
+                                                            </div>
+                                                            <div translate
+                                                                *ngIf="changePasswordForm.controls.new_password.errors?.required && changePasswordForm.controls['confirm_password'].touched">
+                                                                Password is required
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Confirm <span
+                                                                        class="d-none d-xl-inline">Password</span></label>
+                                                                <input class="form-control"
+                                                                    formControlName="confirm_password" type="text">
+                                                            </div>
+                                                            <!-- <p class="help-block"
+                                                                *ngIf="changePasswordForm.controls['confirm_password'].hasError('required') && changePasswordForm.controls['confirm_password'].touched">
+                                                                Password must be required</p> -->
+                                                            <p class="help-block"
+                                                                *ngIf="!confirmed && changePasswordForm.controls['confirm_password'].touched">
+                                                                password does not match</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col d-flex justify-content-end">
+                                                    <button (click)="changePassword()" class="btn btn-primary"
+                                                        >Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

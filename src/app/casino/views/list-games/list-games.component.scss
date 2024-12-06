@@ -1,0 +1,58 @@
+.SquareGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-gap: 15px;
+    padding-bottom: 35px;
+}
+
+.row.bd-marg-casi p {
+    color: var(--text-dark);
+    font-size: 22px;
+    padding: 20px 0;
+}
+
+@media (max-width:767px) {
+    .SquareGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
+.bg-color-txt{
+    color: var(--primary);
+    background-color: transparent; border: none;margin-bottom: 10px;text-align: center; padding-top: 10%;font-weight: 700;
+}
+
+
+.rainbow {
+	position: relative;
+	z-index: 0;
+	width: 160px;
+	height: 50px;
+	border-radius: 10px;
+	overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    background-image: linear-gradient(90deg, #21e1ee 0%, #465be3 45%, #c443b2 100%);
+
+
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: var(--header-background);
+		border-radius: 5px;
+        
+	}
+}

@@ -1,0 +1,187 @@
+.bet-history-listing {
+    width: 100%;
+    background-color: var(--box-sidebar-background);
+    padding: 10px 5px;
+
+    table {
+        width: 100%;
+        color: var(--color-txt-tr-tbody);
+        border: 1px solid #fff;
+
+        thead {
+            border-bottom: 1px solid #fff;
+        }
+
+        th {
+            background: var(--th-table);
+        }
+
+        th,
+        td {
+            border-right: 1px solid;
+            margin: 5px !important;
+            padding: 5px !important;
+        }
+
+        tr.more-details {
+            border-bottom: 1px solid #fff;
+            border-top: 1px solid #fff;
+        }
+
+        tr:nth-child(odd) {
+            background-color: var(--tr-tbody);
+        }
+
+        thead tr {
+            background: var(--th-table) !important;
+        }
+    }
+}
+
+.mobile-listing {
+    padding-bottom: 20px;
+}
+
+@media(min-width: 1200px) {
+    .mobile-listing {
+        display: none;
+    }
+
+    .bet-history-listing {
+        display: block;
+    }
+}
+
+
+@media(max-width: 1199px) {
+    .mobile-listing {
+
+        &__data {
+            display: grid;
+            grid-template-columns: 4fr 4fr 1fr;
+            width: 100%;
+            justify-content: space-between;
+            background-color: var(--box-sidebar-background);
+            align-items: center;
+            color: #fff;
+            padding: 10px 5px;
+            border: 1px solid #fff;
+
+            .bet-history-status {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            span.status-bet-coupon.won {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: green;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+        }
+
+
+    }
+
+    .bet-history-listing {
+        display: none;
+    }
+}
+
+.type-r {
+    animation: lost 5s infinite;
+    color: white;
+    border-radius: 10px;
+}
+
+.type-b {
+    animation: bet 5s infinite;
+    color: white;
+    border-radius: 10px;
+}
+
+.type-w {
+    color: white;
+    animation: win 5s infinite;
+    border-radius: 10px;
+}
+
+@keyframes lost {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: rgb(133, 4, 4);
+    }
+}
+@keyframes bet {
+    from {
+        background-color: rgb(197, 95, 0);
+    }
+
+    to {
+        background-color: rgb(122, 57, 3);
+    }
+}
+
+@keyframes win {
+    from {
+        background-color: green;
+    }
+
+    to {
+        background-color: rgb(32, 146, 60);
+    }
+}
+
+li {
+    border: 1px solid var(--header-background);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: var(--box-sidebar-background);
+    font-weight: 500;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+
+}
+
+.text-info {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--header-background);
+    float: right;
+}
+
+.betreslt {
+    text-align: center;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.matchInfo {
+    text-align: center;
+    color: rgb(230, 230, 230);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.show {
+    display: revert;
+}
+
+.hide {
+    display: none;
+}

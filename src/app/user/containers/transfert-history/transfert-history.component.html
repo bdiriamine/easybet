@@ -1,0 +1,53 @@
+<div class="web no-gutters">
+    <div class="content-main touch-left bg">
+        <div class="row header">
+            <h4 class="page-title">
+                Depot/Retrait history</h4>
+        </div>
+        <ngb-accordion #acc="ngbAccordion" style="width: 100%;">
+            <ngb-panel id="toggle-1" title="Depot" style="background-color: var(--box-sidebar-background); ">
+                <ng-template ngbPanelContent let-opened="opened"
+                    style="background-color: var(--box-sidebar-background) ; ">
+
+                    <div style="background-color: var(--box-sidebar-background); border-radius: 5px;"
+                        *ngFor="let deposit of deposits">
+
+                        <p class="px-3 pt-3" style="color: var(--text-primary);">Date : {{deposit.created_at | date:
+                            'dd/MM/yyyy'}} </p>
+                        <!-- {{dep.created_at | date:'MM/dd/yyyy h:mm a'}} -->
+                        <hr>
+                        <p class="px-3 " style="color: var(--text-primary);">Amount : {{deposit.amount}} Dt</p>
+                        <hr>
+                        <p class="px-3" style="color: var(--text-primary);">From : {{deposit.sender}}</p>
+                        <hr>
+                        <p class="px-3 " style="color: var(--text-primary);">History : {{deposit.history_reciver }}</p>
+                        <hr>
+                        <p class="px-3 pb-3" style="color: var(--text-primary);">Type : Deposit</p>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+            <ngb-panel id="toggle-2" title="Retrait">
+                <ng-template ngbPanelContent>
+                    <div style="background-color: var(--box-sidebar-background) ;border-radius: 5px;"
+                        *ngFor="let withdraw of withdraws">
+
+                        <p class="px-3 pt-3" style="color: var(--text-primary);">Date : {{withdraw.created_at | date:
+                            'dd/MM/yyyy'}} </p>
+                        <hr>
+                        <p class="px-3 " style="color: var(--text-primary);">Amount : {{withdraw.amount}} Dt</p>
+                        <hr>
+                        <p class="px-3 " style="color: var(--text-primary);">From : {{withdraw.sender}} </p>
+                        <hr>
+                        <p class="px-3" style="color: var(--text-primary);">History :{{withdraw.history_reciver }} </p>
+                        <hr>
+                        <p class="px-3 pb-3" style="color: var(--text-primary);">Type : Retrait</p>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+
+
+
+
+    </div>
+</div>

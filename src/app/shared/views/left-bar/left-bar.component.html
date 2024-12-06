@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <nav class="sidebar leftbar" [class.active]="opened">
+    <div style="top: 10px; left: 10px;position: absolute;">
+      <input [checked]="mode" (change)="checkCheckBoxvalue($event)" class="toggle" type="checkbox">
+    </div>
+
+    <div class="dismiss">
+      <i class="fas fa-arrow-left" (click)="closeLeftBar()"></i>
+    </div>
+    <div class="logo">
+      <h3><img src="https://easybet.tn/assets/easybet.png" alt="logoEasy" class="imgsidebar"></h3>
+    </div>
+    <div class="scrolling-part">
+      <div class="side-menu__row">
+        <div class="side-menu__separator side-menu__separator_left"></div><span class="side-menu__title">Menu </span>
+        <div class="side-menu__separator side-menu__separator_right"></div>
+      </div>
+      <app-box-side-nav></app-box-side-nav>
+      <div class="side-menu__row">
+        <div class="side-menu__separator side-menu__separator_left"></div><span class="side-menu__title"> Licence
+        </span>
+        <div class="side-menu__separator side-menu__separator_right"></div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center pt-5">
+        <div class="limit" >
+          <div class="age-bar">+21</div> <span> Jouez de manière responsable</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

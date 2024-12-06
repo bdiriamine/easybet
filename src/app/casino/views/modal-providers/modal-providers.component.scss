@@ -1,0 +1,230 @@
+.provider {
+    // background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    // width:150px
+}
+
+.search::placeholder {
+    font-family: "Changa", sans-serif;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.card-body {
+    padding: 0rem !important;
+    background-color: transparent !important;
+    position: relative;
+}
+
+.card {
+    background-color: transparent !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.cut-text {
+    // text-overflow: ellipsis;
+    overflow: hidden;
+    // width: 160px;
+    // height: 1.2em;
+    font-size: 0.8rem;
+    // white-space: nowrap;
+}
+
+.providers {
+    padding: 0;
+    display: grid;
+    /* grid-gap: 1rem; */
+    /* grid-gap: 1rem; */
+    /* gap: 1rem; */
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /*  max-width: 100%; */
+}
+
+
+.vendor {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.42rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--casino-category-color);
+}
+
+::ng-deep .modal-content {
+    background-color: #000000 !important;
+}
+
+@media (max-width:767px) {
+    ::ng-deep .modal-content {
+        overflow-y: scroll !important;
+        min-height: 100%;
+    }
+}
+
+.provider-img {
+    border-radius: 5px;
+}
+
+.prov {
+    width: 100%;
+    border-radius: 5px;
+}
+
+// .list {
+//     overflow-y: scroll !important;
+//     height: 480px;
+// }
+
+@media screen and (max-width: 575px) {
+    .providers {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-gap: 4px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        // height: 480px;
+        // overflow-y: scroll !important;
+    }
+
+    // .provider {
+    //     width: 20vw;
+    // }
+}
+
+@media screen and (min-width: 576px) {
+    .providers {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .providers {
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .providers {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .providers {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.icon {
+    background-position-x: -2923.2449px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: relative;
+    float: left;
+    margin-right: 0;
+    width: 50.91546px;
+    height: 28.5712px;
+    display: block;
+    background-image: url(../../../../assets/icons.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.card::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #000000 ;
+}
+
+.card::-webkit-scrollbar {
+    width: 5px;
+    background-color: #000000 ;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
+}
+
+.card-header {
+    position: sticky;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+li.provider {
+    box-shadow: 0px 0px 2px 0px rgb(0 246 239 / 75%);
+    -webkit-box-shadow: 0px 0px 2px 0px rgb(0 246 239 / 75%);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,246,239,0.75);
+    height: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.show-all {
+    border: 2px solid #00f6ef;
+    width: 100px;
+    color: #00f6ef;
+    margin-left: 6px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+span.search-icon {
+    position: absolute;
+    right: 10px;
+    color: #00f6ef;
+    border-left: 1px solid #00f6ef;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 9px;
+    cursor: pointer;
+}

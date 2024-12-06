@@ -1,0 +1,17 @@
+<div class="bet-filter">
+    <form [formGroup]="TransactionForm"  >
+        <div class="form-controle">
+            <label for="" >Période</label>
+            <input type="date" type="date" id="requestdate" placeholder=" " formControlName="starDate" data-view="years"
+            data-date-format="yyyy-mm-dd" data-language="en" data-auto-close="true" required="required">
+        </div>
+        <div class="form-controle">
+            <label for="" >à</label>
+            <input type="date" formControlName="endDate"
+            data-date-format="yyyy-mm-dd" data-language="en" data-auto-close="true" required="required">
+        </div>
+        <div class="button">
+            <button type="submit"  (click)="shearchByDate()">Afficher</button>
+        </div>
+    </form>
+</div>

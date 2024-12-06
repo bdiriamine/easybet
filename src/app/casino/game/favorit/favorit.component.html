@@ -1,0 +1,17 @@
+<app-slider-image [slidesStore]="images"></app-slider-image>
+<div class="container">
+    <div class="navs">
+        <div class="page-navigation">
+            <div class="proder-name " routerLink="/games/casino"><a class="active">casino</a></div>
+            <div class="proder-name" routerLink="/games/live-casino"><a class="active">Live casino</a></div>
+            <div class="proder-name" routerLink="/games/virtual"><a class="active">virtual</a></div>
+        </div>
+    </div>
+    <div>
+        <span class="title">Liste favorits</span>
+    </div>
+    <div style="margin-top: 2rem">
+        <app-list-games></app-list-games>
+    </div>
+
+</div>

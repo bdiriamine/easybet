@@ -1,0 +1,37 @@
+<header class="header bottom-bar">
+    <div class="" style="position: relative;">
+        <nav class="bottom-nav">
+            <div class="bottom-nav-item"   >
+                <div class="bottom-nav-link"   [ngClass]="linkActiv == '/Livebetting' ? 'active' : 'notactive'" [routerLink]="['Livebetting']">
+                    <i class="fa-solid fa-video"></i>
+                    <span>Live Sport</span>
+                </div>
+            </div>
+            <div class="bottom-nav-item"   >
+                <div class="bottom-nav-link"  [ngClass]="linkActiv == '/prelive' ? 'active' : 'notactive'" [routerLink]="['prelive']">
+                    <i class="fa-regular fa-futbol"></i>
+                    <span>Sport</span>
+                </div>
+            </div>
+            <div class="bottom-nav-item"     >
+                <div class="bottom-nav-link" [ngClass]="linkActiv == '/games/live-casino' ? 'active' : 'notactive'" [routerLink]="['games/live-casino']">
+                    <i class="fa-solid fa-desktop"></i>
+                    <span>Live Casino</span>
+                </div>
+            </div>
+            <div class="bottom-nav-item"    >
+                <div class="bottom-nav-link" [ngClass]="linkActiv == '/games/casino' ? 'active' : 'notactive'" [routerLink]="['games/casino']">
+                    <i class="fa-solid fa-dice"></i>
+                    <span>Casino</span>
+                </div>
+            </div>
+
+            <div class="bottom-nav-item"    >
+                <div class="bottom-nav-link" [ngClass]="linkActiv == '/games/virtual' ? 'active' : 'notactive'" [routerLink]="['games/virtual']">
+                    <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                    <span>Virtual</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

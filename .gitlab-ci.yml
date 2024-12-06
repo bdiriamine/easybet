@@ -1,0 +1,57 @@
+stages:
+    - build
+    - develop
+    - prod
+
+build:
+    stage: build
+    image: docker:latest
+    services:
+        - docker:dind
+    script:
+        - CONTAINER_TEST_IMAGE=${CI_REGISTRY}/${CI_PROJECT_PATH}:${CI_COMMIT_SHORT_SHA}
+        - echo "$REGISTRY_PASSWORD" | docker login -u $REGISTRY_USER  $CI_REGISTRY --password-stdin 
+        - "docker build -t ${CONTAINER_TEST_IMAGE} ."
+        - "docker push ${CONTAINER_TEST_IMAGE}"
+
+
+develop:deploy:
+    stage: develop
+    image: nginx
+    only:
+        - v0-Beta
+    before_script:
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - eval $(ssh-agent -s)
+        - echo "$DEV_SSH_KEY" | tr -d '\r' | ssh-add -
+        - mkdir -p ~/.ssh
+        - chmod 600 ~/.ssh
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - whoami
+        - apt update
+        - apt install -y git
+        - CONTAINER_TEST_IMAGE=${CI_REGISTRY}/${CI_PROJECT_PATH}:${CI_COMMIT_SHORT_SHA}
+        - ssh sysadm@$DEV_IP "docker pull $CONTAINER_TEST_IMAGE && docker service update --image $CONTAINER_TEST_IMAGE dev_easy_front"
+
+
+prod:deploy:
+    stage: prod
+    image: nginx
+    only:
+        - prod
+    before_script:
+        - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+        - eval $(ssh-agent -s)
+        - echo "$DEV_SSH_KEY" | tr -d '\r' | ssh-add -
+        - mkdir -p ~/.ssh
+        - chmod 600 ~/.ssh
+        - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    script:
+        - whoami
+        - apt update
+        - apt install -y git
+        - CONTAINER_TEST_IMAGE=${CI_REGISTRY}/${CI_PROJECT_PATH}:${CI_COMMIT_SHORT_SHA}
+        - apt install sshpass -y
+        - sshpass -p "$SE_PASS" ssh sysadm@$PROD_IP "docker pull $CONTAINER_TEST_IMAGE && docker service update --image $CONTAINER_TEST_IMAGE easyprod_easy_front"
+

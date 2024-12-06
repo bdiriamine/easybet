@@ -1,0 +1,162 @@
+
+
+#turbogamePage {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    }
+    #pageContent.opened {
+    display: block;
+    }
+    #turbogamePage #howToPlayAviatorContent, #turbogamePage #howToPlayZeppelinContent, #turbogamePage #pageContent {
+    transition: all .7s;
+    width: 100%;
+    z-index: 10;
+    }
+    
+    #turbogamePage #turbogameBoxes {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    z-index: 11;
+    width: 100%;
+    }
+    // #turbogamePage #howToPlayAviatorContent .container, #turbogamePage #howToPlayZeppelinContent .container, #turbogamePage #turbogameBoxes .container {
+    // display: flex;
+    // }
+    #turbogamePage .box {
+    border: 5px solid rgba(42, 47, 57, .3);
+    background-color: rgba(32, 37, 53, .4);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 10%);
+    position: relative;
+    width: 100%;
+    }
+    #turbogamePage .box.box-1 .box-content, #turbogamePage .box.box-1 .box-content .sys-game {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    }
+    #turbogamePage .box.box-1 .box-content {
+    padding: 70px 0;
+    color: #fff;
+    }
+    #turbogamePage .box.box-1 .box-content .sys-game {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    }
+    #turbogamePage .box .box-content p {
+    font-size: 18px;
+    margin: 20px 0;
+    }
+    #turbogamePage .box.box-1 .box-content img {
+    max-height: 200px;
+    align-self: center;
+    margin-bottom: 40px;
+    }
+    a {
+    color: #34b7a7;
+    }
+    #turbogamePage .box.box-1 .box-content a.btn.play-now, #turbogamePage .box.box-1 .box-content a.btn.play-sys-game {
+    background-color: #bc0a36;
+    }
+    #turbogamePage .box .box-content a.btn.play-now, #turbogamePage .box .box-content a.btn.play-sys-game {
+    padding: 15px 50px;
+    font-weight: 700;
+    }
+    #turbogamePage .box .box-content a.btn {
+    padding: 5px 50px;
+    border-radius: 40px!important;
+    color: #fff;
+    transition: all .3s;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 17px;
+    }
+    .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    }
+    .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    a {
+    color: #34b7a7;
+    }
+    a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    }
+    #turbogamePage .box {
+    border: 5px solid rgba(42, 47, 57, .3);
+    background-color: rgba(32, 37, 53, .4);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 10%);
+    position: relative;
+    width: 100%;
+    }
+    #turbogamePage .box.box-2 .box-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content:center;
+    text-align: center;
+    }
+    #turbogamePage .box.box-2 .box-content .sys-game {
+    margin: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    }
+    #turbogamePage .box .box-content p {
+    font-size: 18px;
+    margin: 20px 0;
+    }
+
+    img {
+    vertical-align: middle;
+    border-style: none;
+    }
+    @media screen and (max-width:992px) {
+        #turbogamePage .box.box-2 .box-content .sys-game img {
+            width: 100px;
+            margin: 0;
+            height: 100px;
+            }
+        
+    }
+    @media screen and (min-width:993px) {
+        #turbogamePage .box.box-2 .box-content .sys-game img {
+            width: 200px;
+            margin: 0;
+            height: 200px;
+            padding: 10px;
+              border-radius: 21px;
+            }
+        
+    }

@@ -1,0 +1,21 @@
+<div class="row bd-marg-casi">
+    <div class="col-md-6">
+        <p *ngIf="filterType == 'provider' "> {{provider}}</p>
+        <p *ngIf="filterType == 'category' ">{{category}}</p>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+</div>
+<div class="SquareGrid">
+    <div class="item" *ngFor="let game of games ">
+        <app-game [game]="game"></app-game>
+    </div>
+</div>
+<div class="row" *ngIf="!end && currentRoute !== '/games/favorit' ">
+    <div class="rainbow">
+        <button class="bg-color-txt" (click)="loadmore()">
+            LOAD MORE
+        </button>
+    </div>
+</div>

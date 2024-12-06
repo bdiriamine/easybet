@@ -1,0 +1,109 @@
+<nav class=" navbar navbar-expand-md navbar-dark   fixed-lg-top ">
+    <div class="flex-header">
+        <div class="responsive-flex-bloc">
+            <button class="navbar-toggler navbar-toggler-right border-0  icon-color" type="button" data-toggle="collapse" (click)="openLeftBar()"
+                data-target="#navbar4">
+                <a >
+                    <i class="fa-solid fa-bars primary-color"></i>
+                </a>
+            </button>
+
+            <a class="navbar-brand d-flex align-items-center" [routerLink]="'home'">
+                <img src="https://easybet.tn/assets/easybet.png" alt="logo" class="img-lg">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right border-0 icon-color" type="button" data-toggle="collapse" (click)="open(true)"
+                data-target="#navbar4">
+                <a  >
+                    <i #profilIcon class="fa-solid fa-user"></i>
+                </a>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbar4">
+            <ul class="navbar-nav  pl-lg-4">
+                <li class="nav-item px-lg-2" [routerLink]="'home'" [class.active]="currentPath === '/home'">
+                    <a class="nav-link" style="cursor: pointer;">
+                        <span class="d-inline-block font-weight-bold icon-width linav text-color"
+                            style="font-size:1em;">
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item px-lg-2" [routerLink]="'prelive'" [class.active]="currentPath === '/prelive'">
+                    <a class="nav-link" style="cursor: pointer;">
+                        <span class="d-inline-block font-weight-bold icon-width linav text-color"
+                            style="font-size:1em;">
+                            Sport
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item px-lg-2" [routerLink]="'Livebetting'"
+                    [class.active]="currentPath === '/Livebetting'">
+                    <a class="nav-link" style="cursor: pointer;">
+                        <span class="d-inline-block font-weight-bold icon-width linav text-color"
+                            style="font-size:1em;">
+                            Live Sport
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item px-lg-2" [routerLink]="'games/casino'"
+                    [class.active]="currentPath === '/games/casino'">
+                    <a class="nav-link" style="cursor: pointer;">
+                        <span class="d-inline-block font-weight-bold icon-width linav text-color"
+                            style="font-size:1em;">
+                            Casino
+                        </span></a>
+                </li>
+
+                <li class="nav-item px-lg-2" [routerLink]="'games/live-casino'"
+                    [class.active]="currentPath === '/games/live-casino'">
+                    <a class="nav-link" style="cursor: pointer;"><span
+                            class="d-inline-block font-weight-bold icon-width linav text-color" style="font-size:1em;">
+                            Live Casino
+                        </span></a>
+                </li>
+
+
+                <li class="nav-item px-lg-2" [routerLink]="'mini-games'"
+                    [class.active]="currentPath === '/mini-games'"> <a class="nav-link"
+                        style="cursor: pointer;"><span
+                            class="d-inline-block font-weight-bold icon-width linav text-color" style="font-size:1em;">
+                            Mini Games
+                        </span></a>
+                </li>
+
+                <li class="nav-item px-lg-2" [routerLink]="'/games/virtual'"
+                    [class.active]="currentPath === '/games/virtual'"> <a class="nav-link"
+                        style="cursor: pointer;"><span
+                            class="d-inline-block font-weight-bold icon-width linav text-color" style="font-size:1em;">
+                            Virtual
+                        </span></a>
+                </li>
+
+            </ul>
+            <div class="btn-cnx">
+                <div *ngIf="isConnected" class="balance">
+                    <span>{{balance}} Dt</span>
+                </div>
+                <span class="lighmode mr-4" style="margin-right: 12px;">
+                    <input [checked]="mode" (change)="checkCheckBoxvalue($event)" class="toggle" type="checkbox">
+                </span>
+                <button class="text-bold btn login-btn login-btn1 text-color" *ngIf="!isConnected"
+                    (click)="openModal()">Connect</button>
+                <button class="text-bold btn login-btn login-btn1 text-color" #profileButton *ngIf="isConnected"
+                    (click)="openUserDetails(true)">Profile</button>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<div *ngIf="rightBarOn | async" class="right-bar">
+    <app-right-bar-connected (opened)="open($event)" [profilIcon]="{ nativeElement: profilIcon}">
+    </app-right-bar-connected>
+</div>
+
+<div *ngIf="showUserDetails" class="user-details">
+    <app-web-profile-links (opened)="openUserDetails($event)" [profileButton]="profileButton"></app-web-profile-links>
+</div>

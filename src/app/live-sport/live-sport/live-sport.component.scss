@@ -1,0 +1,15 @@
+@media(min-width: 768px) {
+    iframe {
+        height: calc(100vh - 65px);
+        width: 100%;
+        overflow: scroll;
+    }
+}
+
+@media(max-width: 767px) {
+    iframe {
+        height: calc(100vh - 75px);
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+}

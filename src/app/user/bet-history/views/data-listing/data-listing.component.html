@@ -1,0 +1,99 @@
+<div class="bet-history-listing">
+    <table class="mt-1">
+        <thead>
+            <tr>
+                <th scope="col">Date et identifiant</th>
+                <th scope="col">Nom d’utilisateur </th>
+                <th scope="col">Type de pari</th>
+                <th scope="col">Mise</th>
+                <th scope="col">Événements Total</th>
+                <th scope="col">Cotes</th>
+                <th scope="col">Statut</th>
+                <th scope="col">Gain possible </th>
+                <th scope="col">cashout </th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody  *ngFor="let result of tickets;let i = index">
+            <tr>
+                <td> {{result.createdAt | date}} &nbsp; {{result.ticketcode}} <i class="fa-solid fa-print"  style="color:var(--text-primary);" (click)="getCoupn(result.ticketcode)"></i> </td>
+                <td>{{result.username}}</td>
+                <td>{{result.tickettype}}</td>
+                <th scope="col">{{result.ticketbet}} TND</th>
+                <td>{{result.ticketbody.length}}</td>
+                <td>{{result.ticketodds}}</td>
+                <td>{{result.status}}</td>
+                <td>{{result.possibleWin}}</td>
+                <td><span *ngIf="result.cashout==0"> no</span><span *ngIf="result.cashout==1">  <img src="https://easybet.tn/assets/cash-out-icon-8.jpg" style="width:100px;height:70px"></span></td>
+                <td (click)="toggle(i)" >
+                    <span *ngIf="!hideRuleContent[i]"><i class="fa-solid fa-angle-down"></i></span>
+                    <span *ngIf="hideRuleContent[i]"><i class="fa-solid fa-angle-up"></i></span>
+                </td>
+            </tr>
+            <tr [ngClass]="hideRuleContent[i] ? 'show' : 'hide' " *ngFor="let matchs of result.ticketbody ;" class="more-details">
+                    <td colspan="2" >{{matchs.event.date}}</td>
+                    <td colspan="4"><span> {{matchs.event.sport}}-{{matchs.event.category}}-{{matchs.event.tournament}}: {{matchs.event.name}}</span> </td>
+                    <td colspan="3">  Bet :  <span > {{matchs.outcome.name}} </span> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div  *ngIf="pagevide" style="background-color:white ; width: 100%;height:70px;text-align:center;font-size: 15px;font-weight: bold;padding-top: 20px;">
+    Liste est Vide ..merci de choisir les dates !!
+</div>
+<div *ngFor="let result of tickets;let i = index" class="mobile-listing" >
+    <div class="clr-col-lg-12 clr-col-12">
+        <div class="card" style="color: white">
+            <div class="card-block">
+                <div class="expandCollapse" style="width: 100%;">
+                    <button (click)="toggle(i)" style="width: 100%;background-color: var(--box-sidebar-background); border:1px solid var(--primary) ">
+                      <!-- <span style="float:right;font-size: 15px;" [ngClass]="result.type == 'W' ? 'type-w' : (result.type == 'R'? 'type-r' : 'type-b')"><i class="fa fa-eercast" aria-hidden="true"></i></span>    -->
+                    <ul style="font-size: 15px;font-weight:200;color: white; list-style-type: none; margin-top: 5px;  ">
+                        <li>
+                            {{result.createdAt | date}}
+                        </li>
+                        <li>
+                            ID: <span >{{result.ticketcode}} &nbsp; <i class="fa-solid fa-print"  style="color:var(--text-primary);" (click)="getCoupn(result.ticketcode)"></i> </span>
+                        </li>
+                        <li>
+                            Événements Total : <span >{{result.ticketbody.length}}</span> 
+                        </li>
+                        <li>
+                            Cotes : <span >{{result.ticketodds}}</span> 
+                        </li>
+                        <li>
+                            Mise : <span >{{result.ticketbet}}</span> 
+                        </li>
+                        <li  *ngIf="result.cashout==1">
+                            <img src="https://easybet.tn/assets/cash-out-icon-8.jpg" style="width:140px;height:80px">
+                        </li>
+                        <li>
+                            Gain possible : <span >{{result.possibleWin}} &nbsp; TND </span> 
+                        </li>
+                        <li  [ngClass]="result.status == 'win' ? 'type-w' : (result.status == 'bet'? 'type-b' : 'type-r')">
+                            Result : <span >{{result.status}}</span>
+                        </li>
+                    </ul>  
+                    </button>
+                </div>
+                <div class="expandCollapseContent" *ngIf="hideRuleContent[i]" style="border: 1px solid var(--primary);">
+                    <div  style="background: black">
+                        <p style="text-align: center;color: rgb(206, 206, 206);font-size: 15px;font-weight: bold;"> Liste des Jeux </p>
+                        <ul *ngFor="let matchs of result.ticketbody ;" >
+                            <li class="matchInfo">
+                                {{matchs.event.sport}}:{{matchs.event.category}}-{{matchs.event.tournament}}: {{matchs.event.name}} &nbsp; {{matchs.event.date}}
+                            </li>
+                            <li class="betreslt">
+                                {{matchs.outcome.result}} 
+                            </li>
+                            <li>
+                              <p class="betreslt"> Mise :  <span > {{matchs.outcome.name}} </span></p> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngb-pagination  *ngIf="!vide" [(page)]="page" [pageSize]="10" [maxSize]="5" [collectionSize]="totalPages" (pageChange)="getHistoryTickByPage(page)"></ngb-pagination>

@@ -1,0 +1,12 @@
+<table class="mt-1">
+    <thead>
+        <tr>
+            <th scope="col" *ngFor="let row of Rows">{{row}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of Datas;let i=index">
+            <td>{{data[i]}}</td>
+        </tr>
+    </tbody>
+</table>

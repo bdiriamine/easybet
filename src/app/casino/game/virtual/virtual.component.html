@@ -1,0 +1,9 @@
+<div class="casino-caro">
+    <app-slider-image [slidesStore]="images"></app-slider-image>
+</div>
+<div class="container">
+<app-filter [providersList]="listProviders" (gamesList)="getGamesLis($event)" (allGames)="showAllGames()" [providerChoosen]="choosenProvider" (searchValName)="searchname($event)" [categoryList]="categoriesList" (filterType)="getFilterType($event)"></app-filter>
+<app-liste-proviers  *ngIf="gamesByProvider == undefined" [providers]="listProviders" (providerChoosen)="getProviderChoosen($event)"></app-liste-proviers>
+
+<app-list-games *ngIf="gamesByProvider !== undefined" [listGames]="gamesByProvider" [filterType]="filterType"></app-list-games>
+</div>

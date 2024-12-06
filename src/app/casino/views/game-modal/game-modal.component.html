@@ -1,0 +1,14 @@
+<div class="modal-dialog modal-fullscreen">
+    <div class="modal-body" style="background-image: url({{image}}); ">
+        <div class="modal-header border-0">
+            <div class="name">
+                <h4 class="modal-title">{{name}}</h4>
+            </div>
+            <div class="buttons">
+                <i class="fullscreen hand fa-solid fa-expand fa-2xl" (click)="openFullscreen()"></i>
+                <i class="gelatine hand fa-regular fa-circle-xmark fa-2xl" (click)="activeModal.dismiss('Cross click')" style="z-index: 999;"></i>
+            </div>
+        </div>
+        <iframe #iframe  class="game-frame" frameborder="0" allow="autoplay" scrolling="no" [src]="urlIfram"></iframe>
+    </div>
+</div>

@@ -1,0 +1,331 @@
+.home-jackpots h1 {
+    font-family: "exo 2";
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-right: auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.jackpot-item {
+    width: 25%;
+}
+
+.amount {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: #00ffff3b;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 2px 10px 2px 10px;
+}
+
+.radius {
+    border-radius: 10px;
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    -moz-box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+
+.banner-text {
+    background-image: url("../../../../assets/home/sport.webp");
+    height: 250px;
+    border-radius: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid var(--border-cards);
+    background-size: cover;
+    background-position: 14% 34%;
+}
+
+.banner-text2 {
+    background-image: url("../../../../assets/home/casino.webp");
+}
+
+.banner-text3 {
+    background-image: url("../../../../assets/home/virtual.webp");
+}
+
+.banner-text4 {
+    background-image: url("../../../../assets/home/mini-games.webp");
+}
+
+.banner-text5 {
+    background-image: url("../../../../assets/home/slot.webp");
+}
+
+.banner-text6 {
+    background-image: url("../../../../assets/home/spor-betting.webp");
+}
+
+.txtsp {
+    color: #00f6ef;
+    font-size: 24px;
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    // position: absolute;
+    font-style: italic;
+    // top: 6%;
+    // left: 80px;
+}
+
+.txtBT {
+    color: #e6e6e6;
+    font-size: 22px;
+    margin-top: 0;
+    font-weight: 200;
+    text-transform: uppercase;
+    // position: relative;
+    // top: 17%;
+    // left: 10%;
+}
+
+.txtDS {
+    color: #e6e6e6;
+    font-size: 14px;
+    margin-top: 0;
+    font-weight: 200;
+    // top: 17%;
+    // left: 80px;
+    // position: absolute;
+    width: 50%
+}
+
+.sport-banner .banner-text .rounded-btn {
+    background: no-repeat;
+    border-color: #fff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.rounded-btn {
+    text-align: center;
+    color: var(--theme-text-color);
+    border: 1px solid;
+    line-height: 33px;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 100px;
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    // top: 17%;
+    // left: 10%;
+    // position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sport-banner:hover .txtsp {
+    filter: brightness(1.2);
+    color: #313131 !important;
+    text-shadow: 2px 2px 5px #00f6ef;
+}
+
+.sport-banner:hover .banner-text {
+
+    background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/sport.webp") left top no-repeat;
+    background-position: 300px 0px, 0px 0px;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.sport-banner:hover .banner-text2 {
+
+    background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/casino.webp") left top no-repeat;
+    background-position: 300px 0px, 0px 0px;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.sport-banner:hover .banner-text3 {
+
+    background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/virtual.webp") left top no-repeat;
+    background-position: 300px 0px, 0px 0px;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.sport-banner:hover .banner-text4 {
+    background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/mini-games.webp") left top no-repeat;
+    background-position: 300px 0px, 0px 0px;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.sport-banner:hover .banner-text5 {
+    background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/slot.webp") left top no-repeat;
+    background-position: 300px 0px, 0px 0px;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.sport-banner:hover .banner-text6 {
+    background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/spor-betting.webp") left top no-repeat;
+    background-position: 300px 0px, 0px 0px;
+    -webkit-animation: flash 1.5s;
+    animation: flash 1.5s;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1400px) and (min-width:992px) {
+    .txtDS {
+        color: #e6e6e6;
+        font-size: 10px;
+        margin-top: 0;
+        font-weight: 200;
+        // top: 20%;
+        // left: 10%;
+        // position: relative;
+        width: 80%
+    }
+
+    .txtsp {
+        font-size: 24px;
+        // top: 10%;
+        // left: 10%;
+    }
+
+    .banner-text {
+        height: 200px;
+    }
+
+    // .banner-text2 {
+    //     height: 200px;
+    //     background-size: cover;
+    //     position: relative;
+    // }
+
+    // .banner-text3 {
+    //     height: 200px;
+    //     background-size: cover;
+    //     position: relative;
+    // }
+
+    // .banner-text4 {
+    //     height: 200px;
+    //     background-size: cover;
+    //     position: relative;
+    // }
+
+    // .banner-text5 {
+    //     height: 200px;
+    //     background-size: cover;
+    //     position: relative;
+    // }
+
+    // .banner-text6 {
+    //     height: 200px;
+    //     background-size: cover;
+    //     position: relative;
+    // }
+
+    .txtBT {
+        top: 12%;
+    }
+
+    .sport-banner:hover .banner-text {
+
+        background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/sport.webp") left top no-repeat;
+        background-size: 190px 190px, cover;
+        background-position: 130px 0px, 0px 0px;
+    }
+
+    .sport-banner:hover .banner-text2 {
+
+        background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/casino.webp") left top no-repeat;
+        background-size: 190px 190px, cover;
+        background-position: 130px 0px, 0px 0px;
+    }
+
+    .sport-banner:hover .banner-text3 {
+        background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/virtual.webp") left top no-repeat;
+        background-size: 190px 190px, cover;    
+        background-position: 130px 0px, 0px 0px;
+    }
+
+    .sport-banner:hover .banner-text4 {
+        background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/mini-games.webp") left top no-repeat;
+        background-size: 190px 190px, cover;
+        background-position: 130px 0px, 0px 0px;
+    }
+
+    .sport-banner:hover .banner-text5 {
+        background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/slot.webp") left top no-repeat;
+        background-size: 190px 190px, cover;
+        background-position: 130px 0px, 0px 0px;
+    }
+
+    .sport-banner:hover .banner-text6 {
+        background: url(../../../../assets/home/celebration.gif) right bottom no-repeat, url("../../../../assets/home/spor-betting.webp") left top no-repeat;
+        background-size: 190px 190px, cover;
+        background-position: 130px 0px, 0px 0px;
+    }
+}
+
+@media (max-width:500px) {
+    .txtDS {
+        width: 85% !important;
+    }
+
+}
+
+@media (max-width:767px) {
+    .banner-text {
+        height: 165px;
+        background-size: 100% 100% !important;
+        background-position: 70% 34% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    // .banner-text {
+    //     background-position: 70% 34% !important;
+    // }
+
+    .txtDS {
+        font-weight: 600;
+    }
+
+
+}

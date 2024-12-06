@@ -1,0 +1,30 @@
+<div class="card text-center border-0">
+    <div class="card-body border-0">
+        <div class="card-header d-flex">
+            <button class="btn" type="button" (click)="activeModal.dismiss('Cross click')"
+                style="border-radius:10px  !important;color:var(--primary);border-color: var(--primary);">
+                <i class="fa-solid fa-xmark"></i></button>
+            <div class="d-flex align-items-center">
+                <div class="input-group border-0">
+                    <input type="text"
+                        style="background-color: transparent;border-color: var(--primary);color: var(--primary);"
+                        [(ngModel)]="provider_name" name="provider" (keyup)="provider_name" (keyup.enter)="search($event)" class="search form-control "
+                        placeholder=" Search by provider" aria-label="" aria-describedby="basic-addon1">
+                        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <div class="input-group show-all"  *ngIf="providers.length == 1" (click)="showAll()"><span>Show all</span></div>
+            </div>
+        </div>
+        <div class="list">
+            <ul class="pt-1 providers m-1">
+                <li class=" provider m-1 hand cut-text txt"  *ngFor="let provider of providers">
+                    <div class="vendor" (click)="filteerByProvider(provider.name)">
+                        <div class="provider-img">
+                            <img class="prov" src="../../../assets/providers/{{provider.name | lowercase }}.png" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

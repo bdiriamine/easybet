@@ -1,0 +1,51 @@
+<div class="container-fluid body-content slider-height" style="padding-left:0px;padding-right:0px">
+    <main id="turbogamePage">
+        <div id="pageContent" class="opened">
+            <div id="turbogameBoxes">
+                <div class="container spacing">
+                    <div class="box box-1">
+                        <div class="box-content">
+                            <div class="sys-game mb-4" *ngFor="let gameTop of TopGame">
+                                <i class="provider-o spribe hidden"></i>
+                                {{gameTop.label}}
+                                <img src="../../../assets/image Top Games/{{gameTop.label}}.webp" alt="mini"
+                                    class="game-image">
+                                <a class="btn play-now"
+                                    (click)="openG(gameTop.play_url,gameTop.logo_url,gameTop.label, gameTop)">Play
+                                    Now</a>
+                            </div>
+                            <div *ngIf="dinogame !== undefined && dinogame !== null" class="sys-game mb-4">
+                                <i class="provider-o spribe hidden"></i>
+                                <img src="../../../assets/image Top Games/{{dinogame.name}}.webp" alt="dino"
+                                    class="game-image">
+                                <a class="btn play-now"
+                                    (click)="openGamecrash(dinogame.url ,dinogame.image_name,dinogame.name)">Play
+                                    Now</a>
+                            </div>
+                                                        <div class="sys-game mb-4" >
+                                <i class="provider-o spribe hidden"  ></i>
+                                <img src="https://easybet.tn/assets/melbet-zeppelin.png" alt="zeep" class="game-image">
+                                <a class="btn play-now"  (click)="openZEep()">Play Now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="box box-2">
+                        <div class="box-content" *ngFor="let games of dinogamesList">
+                            <div class="sys-game" (click)="openGamecrash(games.url,games.image_name,games.name)">
+                                <img src="{{games.image_name}}" alt="dino games" class="game-image"
+                                    onerror=" this.src='assets/erro.png'">
+                            </div>
+                        </div>
+                        <div class="box-content" *ngFor="let game of listminiGmaes">
+                            <div class="sys-game" (click)="openG(game.play_url,game.logo_url,game.label, game)">
+                                <img src="{{game.logo_url}}" class="game-image" alt="other games"
+                                    onerror=" this.src='assets/erro.png'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

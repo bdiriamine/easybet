@@ -1,0 +1,50 @@
+.bet-history {
+    height: 100%;
+    padding: 40px;
+}
+
+::ng-deep .nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--txt-ft);
+    background-color: var(--activerootfilt);
+    border-color: var(--activerootfilt) var(--activerootfilt) var(--activerootfilt);
+}
+
+::ng-deep .nav-link {
+    color: #f7f7f7;
+}
+
+::ng-deep .nav-tabs {
+    border-bottom: 1px solid  var(--activerootfilt);
+    background-color: var(--box-sidebar-background);
+}
+
+::ng-deep .nav-link:hover{
+    color: #e1f1f8;
+}
+
+.title {
+    background-color: var(--box-sidebar-background);
+    padding: 10px;
+    color: #fff;
+}
+
+@media (max-width:767px) {
+    .bet-history {
+        padding: 22px 3px;
+    }
+}
+.type-b {
+    animation: lost 5s infinite;
+}
+.type-w {
+    animation: win 5s infinite;
+}
+@keyframes lost {
+    from {color: red;}
+    to {color: rgb(88, 17, 17);}
+  }
+  @keyframes win {
+    from {color: green;}
+    to {color: rgb(4, 51, 16);}
+  }

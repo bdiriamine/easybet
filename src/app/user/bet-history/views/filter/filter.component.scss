@@ -1,0 +1,81 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 9px;
+    background-color: var(--box-sidebar-background);
+    margin: 25px 0;
+
+    .form-controle {
+        display: flex;
+        flex-direction: column;
+        
+
+        .select select,
+        input {
+            border: 0;
+            padding: 6px 0;
+            width: 180px;
+            height: 35px;
+            border-radius: 7px;
+        }
+
+        label {
+            color: #fff;
+        }
+    }
+
+    .button button {
+        border: 0;
+        padding: 4px;
+        width: 180px;
+        margin-top: 22px;
+        background:  var(--activerootfilt);
+        color: var(--txt-ft);
+        border-radius: 7px;
+        
+    }
+}
+
+@media (min-width:992px) and (max-width: 1120px) {
+
+    .form-controle .select select,
+    input,
+    .button button {
+        width: 140px !important;
+    }
+}
+
+@media (max-width:991px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .form-controle {
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        .button {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width:500px) {
+
+    .form-controle .select select,
+    input,
+    .button button {
+        width: 130px !important;
+    }
+}
+
+@media (min-width:1400px){
+    form .form-controle .select select, form .form-controle input {
+        width: 253px;
+    }
+}

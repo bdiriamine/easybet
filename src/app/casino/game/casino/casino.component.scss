@@ -1,0 +1,110 @@
+.btn,
+.form-control,
+.input-group {
+    border-radius: 10px;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+
+
+.search::placeholder {
+    font-family: "Changa", sans-serif;
+    font-weight: 600;
+}
+
+
+
+
+
+// .SquareGrid{
+//     --content-width: 100vw; 
+//     --gutter: 10px;
+//     --columns: 1;
+    
+//     --row-size: calc(
+//       ( var(--content-width) - (var(--gutter) * (var(--columns) - 1))
+//       ) / var(--columns)
+//     );
+    
+//     display: grid;
+//     width: 100%;
+//     max-width: var(--content-width);
+//     grid-template-columns: repeat(var(--columns), 1fr);
+//     grid-auto-rows: var(--row-size);
+//     grid-column-gap: var(--gutter);
+//     grid-row-gap: var(--gutter);
+//   }
+  
+  
+.item{
+    border-radius: 15px;
+  }
+  
+
+@media screen and (max-width: 575px) {
+    .SquareGrid{
+        --columns: 3;
+      }
+}
+
+@media screen and (min-width: 576px) {
+    .SquareGrid{
+        --columns: 4;
+      }
+}
+
+@media screen and (min-width: 768px) {
+    .SquareGrid{
+        --columns: 5;
+      }
+}
+
+@media screen and (min-width: 992px) {
+    .SquareGrid{
+        --columns: 5;
+      }
+}
+
+@media screen and (min-width: 1200px) {
+    .SquareGrid{
+        --columns: 6;
+      }
+}
+
+
+
+@media screen and (max-width: 575px) {
+  .SquareGridmoin{
+      --columns: 3;
+    }
+}
+
+@media screen and (min-width: 576px) {
+  .SquareGridmoin{
+      --columns: 3;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .SquareGridmoin{
+      --columns: 4;
+    }
+}
+
+@media screen and (min-width: 992px) {
+  .SquareGridmoin{
+      --columns: 4;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+  .SquareGridmoin{
+      --columns: 5;
+    }
+}
+.bd-marg-casi{
+    margin-top: 20px;font-size:22px;color:white;
+}
+
+

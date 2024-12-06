@@ -1,0 +1,10 @@
+<app-nav-bar>
+</app-nav-bar>
+<div class="eb-main">
+    <div class="overlay" [class.active]="left_tab || right_tab"></div>
+    <router-outlet></router-outlet>
+</div>
+<app-footer id="ftr"></app-footer>
+<app-bottom-bar></app-bottom-bar>
+<app-left-bar [opened]="left_tab"></app-left-bar>
+<app-chat-ball *ngIf="(tk !== null && tk !== undefined) && windowWidth > 768" class="chat" id="hd"></app-chat-ball>
